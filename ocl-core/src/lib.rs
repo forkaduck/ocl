@@ -273,6 +273,7 @@ pub type UserDataPtr = *mut ffi::c_void;
 //=============================================================================
 
 mod traits {
+    use half::f16;
     use num_complex::{Complex32, Complex64};
     use num_traits::{FromPrimitive, NumCast, One, ToPrimitive, Zero};
     use std::fmt::{Debug, Display};
@@ -292,7 +293,7 @@ mod traits {
     /// A primitive type usable within `OpenCL` kernels.
     ///
     /// Includes all of the signed, unsigned, and floating point 8 bit - 64 bit
-    /// scalar primitives (ex.: cl_char, cl_uint, cl_double) (exception: cl_half)
+    /// scalar primitives (ex.: cl_char, cl_uint, cl_double)
     /// and their vector counterparts (ex.: cl_int4, cl_float3, cl_short16);
     ///
     /// Can also be implemented for custom types as long as layout and
@@ -313,6 +314,7 @@ mod traits {
         i64,
         usize,
         isize,
+        f16,
         f32,
         f64,
         Complex32,
@@ -363,6 +365,7 @@ mod traits {
         i64,
         usize,
         isize,
+        f16,
         f32,
         f64
     );

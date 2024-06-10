@@ -29,6 +29,7 @@ num-complex = "0.4"
 enum_primitive = "0.1"
 bitflags = "1"
 thiserror = "1.0"
+half = {version = "2.4.1", features = ["num-traits"]}
 
 # Implements all of the vector types and traits.
 ocl-core-vector = { version = "0.1", path = "ocl-core-vector", optional = true }
